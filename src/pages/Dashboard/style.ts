@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Title = styled.h1`
   font-size: 48px;
@@ -6,4 +7,36 @@ export const Title = styled.h1`
   max-width: 450px;
   line-height: 56px;
   margin-top: 80px;
+`;
+
+export const Form = styled.form`
+  margin-top: 40px;
+  max-width: 700px;
+  display: flex;
+
+  input {
+    flex: 1;
+    height: 70px;
+    padding: 0 24px;
+    border: 2px solid red;
+    border-radius: 5px 0px 0px 5px;
+    color: #9400d3;
+    border-right: 0;
+    font-size: 30px;
+  }
+
+  button {
+    width: 160px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 0px 5px 5px 0px;
+    border: 0;
+    background-color: #ba55d3;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: ${shade(0.5, '#ba55d3')};
+    }
+  }
 `;
